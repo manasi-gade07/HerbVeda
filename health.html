@@ -15,7 +15,8 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-white fixed-top">
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg bg-body-white fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#" id="logo">HerbVeda</a>
         <button
@@ -35,7 +36,7 @@
               <a class="nav-link active" href="index.html" id="logo1">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="index.html" id="logo1"
+              <a class="nav-link active" href="#category" id="logo1"
                 >Category</a
               >
             </li>
@@ -44,6 +45,7 @@
                 Health
               </a>
             </li>
+            
           </ul>
           <form class="d-flex" id="searchForm">
             <input
@@ -53,13 +55,51 @@
               placeholder="Search plants here..."
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-success btns " type="submit">
               Search
             </button>
+            <button class="btn btn-outline-success btns" id="quizBtn" type="button">
+              Quiz
+            </button>
+            
           </form>
         </div>
       </div>
     </nav>
+
+
+<!-- Overlay for Quiz Modal -->
+<div class="quiz-overlay"></div>
+
+<!-- Quiz Modal -->
+<div id="quiz-card" class="quiz-card">
+  <div class="quiz-container">
+    <!-- Close Button -->
+    <span id="closeQuiz" class="close-btn">&times;</span>
+
+    <h3>Medicinal Plants Quiz</h3>
+
+    <!-- Quiz Question Container -->
+    <form id="quizForm">
+      <div id="quiz-question-container">
+        <!-- Question will be injected here -->
+      </div>
+    </form>
+
+    <!-- Buttons -->
+    <button type="button" class="btn btn-outline-success" id="nextButton" onclick="nextQuestion()">Next Question</button>
+    <button type="button" class="btn btn-outline-success" id="submitButton" onclick="submitQuiz()" style="display: none;">Submit Quiz</button>
+
+    <!-- Result Card (Initially hidden) -->
+    <div id="quiz-result" style="display: none;">
+      <h3>Quiz Complete!</h3>
+      <p id="score-result">Your Score: 0 out of 5</p>
+      <p>Keep practicing to improve your score!</p>
+      <button class="btn btn-outline-success" id="restartQuiz" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+</div>
+
 
     <!-- types -->
     

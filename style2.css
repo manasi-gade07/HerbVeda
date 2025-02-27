@@ -163,3 +163,89 @@
     background-color: #2ecc71; 
   }
   
+
+  /* Mobile Devices */
+@media only screen and (max-width: 767px) {
+  .types-grid {
+      grid-template-columns: 1fr; /* Stacks cards in a single column */
+      gap: 15px;
+  }
+
+  .type-card img {
+      height: 150px; /* Adjust image height on mobile */
+  }
+
+  .modal-content {
+      width: 90%; /* Use more width on mobile for better spacing */
+      height: auto; /* Adjust modal height on mobile */
+  }
+
+  .types-section h2 {
+      font-size: 2rem; /* Adjust heading size on smaller screens */
+  }
+
+  .types-section p {
+      font-size: 1rem; /* Adjust text size for mobile */
+  }
+
+  .custom-card {
+      height: auto; /* Remove fixed height to accommodate content */
+      width: 100%; /* Ensure the card takes up full width */
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .types-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+      gap: 20px;
+  }
+
+  .type-card img {
+      height: 180px; /* Adjust image height on tablet */
+  }
+
+  .modal-content {
+      width: 50%; /* Set modal width for tablets */
+  }
+
+  .types-section h2 {
+      font-size: 2.2rem; /* Adjust heading size on tablets */
+  }
+
+  .types-section p {
+      font-size: 1.1rem; /* Adjust text size on tablets */
+  }
+
+  .custom-card {
+      height: auto; /* Ensure card height adapts to content */
+  }
+}
+
+/* Larger Screens (Desktop) */
+@media only screen and (min-width: 1025px) {
+  .types-grid {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
+      gap: 20px;
+  }
+
+  .type-card img {
+      height: 200px; /* Standard image height for desktop */
+  }
+
+  .modal-content {
+      width: 25%; /* Default modal width for larger screens */
+  }
+
+  .types-section h2 {
+      font-size: 2.5rem; /* Adjust heading size for larger screens */
+  }
+
+  .types-section p {
+      font-size: 1.2rem; /* Adjust text size for larger screens */
+  }
+
+  .custom-card {
+      height: 180px; /* Standard height for desktop */
+  }
+}
