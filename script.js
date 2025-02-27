@@ -1,22 +1,24 @@
 //Seacrch
-
 document.addEventListener("DOMContentLoaded", function() {
-    const searchForm = document.getElementById("searchForm");
-    const searchInput = document.getElementById("searchInput");
-    const cards = document.querySelectorAll(".card");
+  const searchForm = document.getElementById("searchForm");
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card");
 
-    searchForm.addEventListener("submit", function(event) {
-        event.preventDefault();  
-        const query = searchInput.value.toLowerCase(); 
-        cards.forEach(card => {
-            const cardId = card.id.toLowerCase(); 
-            if (cardId.includes(query)) {
-                card.style.display = "block";
-                card.style.display = "none"; 
-            }
-        });
-    });
+  searchForm.addEventListener("submit", function(event) {
+      event.preventDefault();  
+      const query = searchInput.value.toLowerCase(); 
+      cards.forEach(card => {
+          const cardId = card.id.toLowerCase(); 
+          if (cardId.includes(query)) {
+              card.style.display = "block"; 
+          } else {
+              card.style.display = "none"; 
+          }
+      });
+  });
 });
+
+
 
 
 // Quiz
